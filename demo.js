@@ -29,7 +29,6 @@ let items = [{
     src: "images/img-4.jpg"
 }]
 
-// Data from local Storage 
 let basket = JSON.parse(localStorage.getItem('data')) || [];
 const generateshop = () => {
     return (items.map((x) => {
@@ -61,12 +60,15 @@ const generateshop = () => {
     </div>`)
     }))
 }
+
+
 generateshop();
 
 
-//   All items Quantity is here 
+//   All items Quantity is here
 // let basket = []
 
+// Data from local Storage
 
 
 // Increment  quantity
@@ -89,6 +91,7 @@ const increment = (el, id) => {
     update(id, quantityArea)
 
 }
+
 // Decrement  quantity
 const decrement = (el, id) => {
 
@@ -116,18 +119,22 @@ const decrement = (el, id) => {
 const update = (id, quantityArea) => {
     let search = basket.find((x) => x.id === id)
     quantityArea.innerHTML = search.quantity
-    // console.log(basket)
+    localStorage.setItem('data', JSON.stringify(basket))
     updataCart()
 
 }
-// Update Cart 
+// Update Cart
 const updataCart = () => {
+    console.log(basket)
+
     let quantity = basket.map((x) => x.quantity)
     let totalQuantity = quantity.reduce((x, y) => x + y, 0);
     cartArea.innerHTML = totalQuantity
 
+
 }
 updataCart()
+
 
 // local Storage 
 

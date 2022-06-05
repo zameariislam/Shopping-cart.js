@@ -8,10 +8,6 @@ body {
     font-family: sans-serif;
 }
 
-i {
-    cursor: pointer;
-}
-
 .navbar {
     display: flex;
     justify-content: space-between;
