@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: skyblue;
+    padding: 40px;
+
+}
+
+.priceArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+
+}
+
+#cart {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+#amount {
+    color: white;
+    background-color: red;
+    padding: 2px;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+}
