@@ -102,7 +102,7 @@ const decrement = (el, id) => {
 const update = (id, quantityArea) => {
     let search = basket.find((x) => x.id === id)
     quantityArea.innerHTML = search.quantity
-    console.log(basket)
+    // console.log(basket)
     updataCart()
 
 }
@@ -113,6 +113,20 @@ const updataCart = () => {
     cartArea.innerHTML = totalQuantity
 
 }
+
+// local Storage 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
