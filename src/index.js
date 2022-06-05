@@ -85,8 +85,9 @@ const increment = (el, id) => {
     else {
         search.quantity += 1
     }
-    localStorage.setItem('data', JSON.stringify(basket))
+
     update(id, quantityArea)
+    localStorage.setItem('data', JSON.stringify(basket))
 
 }
 // Decrement  quantity
@@ -103,11 +104,11 @@ const decrement = (el, id) => {
 
         search.quantity = search.quantity - 1
 
-
     }
-    localStorage.setItem('data', JSON.stringify(basket))
-
     update(id, quantityArea)
+    basket = basket.filter((x) => x.quantity !== 0)
+
+    localStorage.setItem('data', JSON.stringify(basket))
 
 }
 
@@ -117,6 +118,7 @@ const update = (id, quantityArea) => {
     let search = basket.find((x) => x.id === id)
     quantityArea.innerHTML = search.quantity
     // console.log(basket)
+
     updataCart()
 
 }
