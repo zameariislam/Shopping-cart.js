@@ -42,3 +42,51 @@ body {
     top: 0;
     right: 25px;
 }
+
+.shop {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.item {
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* display: grid;
+    gap: 10px; */
+
+}
+
+.details {
+    display: grid;
+    gap: 10px;
+    padding: 5px;
+}
+
+.calculation {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity {
+    display: flex;
+}
+
+.buttons {
+    cursor: pointer;
+
+}
+
+.bi-dash-lg {
+    color: red;
+}
+
+.bi-plus-lg {
+    color: blue;
+}
